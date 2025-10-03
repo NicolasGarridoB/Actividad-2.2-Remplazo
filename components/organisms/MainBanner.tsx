@@ -28,17 +28,17 @@ const MainBanner: React.FC<MainBannerProps> = ({
   style = {}
 }) => {
   const bannerStyle = {
-    minHeight: '80vh',
+    minHeight: '60vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     background: backgroundImage 
-      ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${backgroundImage})` 
-      : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      ? `url(${backgroundImage})` 
+      : 'linear-gradient(135deg, #f0f2f5 0%, #ffffff 100%)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    padding: '80px 24px',
+    padding: '60px 24px',
     ...style
   };
 

@@ -11,22 +11,22 @@ export const meta: MetaFunction = () => {
 export default function Home() {
   const infoItems = [
     {
-      title: "Innovación",
-      description: "Utilizamos las últimas tecnologías para crear soluciones innovadoras que impulsen tu negocio hacia el futuro.",
+      title: "Introduction to Python Programming",
+      description: "Learn the basics of Python and build your first program.",
       imageSrc: "/assets/bg_card_1.png",
-      imageAlt: "Innovación"
+      imageAlt: "Introduction"
     },
     {
-      title: "Calidad",
-      description: "Nos comprometemos a entregar productos de la más alta calidad, cumpliendo con los estándares más exigentes.",
+      title: "UI/UX Design Fundamentals",
+      description: "Master the principles of user interface and user experience design.",
       imageSrc: "/assets/bg_card_2.png",
-      imageAlt: "Calidad"
+      imageAlt: "UI/UX Design"
     },
     {
-      title: "Soporte",
-      description: "Nuestro equipo de soporte está disponible 24/7 para ayudarte en cualquier momento que lo necesites.",
+      title: "Entrepreneurship 101: Launching Your Startup",
+      description: "Develop a business plan and learn how to secure funding.",
       imageSrc: "/assets/bg_card_3.png",
-      imageAlt: "Soporte"
+      imageAlt: "Entrepreneurship"
     }
   ];
 
@@ -41,19 +41,17 @@ export default function Home() {
   return (
     <HomeLayout>
       <MainBanner
-        subtitle="Bienvenido a"
-        title="Mi Sitio Web"
-        description="Creamos experiencias digitales excepcionales que transforman ideas en realidad. Descubre cómo podemos ayudarte a alcanzar tus objetivos."
-        primaryButtonText="Comenzar Ahora"
-        secondaryButtonText="Saber Más"
+        title="Unlock Your Potential with Expert-Led Courses"
+        description="Explore a vast library of courses taught by industry leaders and passionate educators. Learn at your own pace , on your own schedule."
+        primaryButtonText="Explore Courses"
+        secondaryButtonText="Sign Up"
         onPrimaryClick={handlePrimaryClick}
         onSecondaryClick={handleSecondaryClick}
         backgroundImage="/assets/bg_main_card.png"
       />
       
       <InfoSection
-        subtitle="Nuestros Valores"
-        title="¿Por qué elegirnos?"
+        title="Featured Courses"
         items={infoItems}
       />
     </HomeLayout>

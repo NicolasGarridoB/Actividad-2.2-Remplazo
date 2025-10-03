@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
-import { Header, Footer } from '../molecules';
+import { Header } from '../molecules';
 
 const { Content } = Layout;
 
@@ -25,8 +25,6 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({
       <Content style={{ flex: 1 }}>
         {children}
       </Content>
-      
-      <Footer />
     </Layout>
   );
 };

@@ -29,41 +29,50 @@ const InfoCard: React.FC<InfoCardProps> = ({
         ...style
       }}
       cover={
-        <div style={{ height: '200px', overflow: 'hidden' }}>
+        <div style={{ 
+          height: '240px', 
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#f8f9fa'
+        }}>
           <Image
             src={imageSrc}
             alt={imageAlt || title}
             style={{ 
               width: '100%', 
               height: '100%', 
-              objectFit: 'cover' 
+              objectFit: 'contain',
+              objectPosition: 'center'
             }}
+            preview={false}
           />
         </div>
       }
     >
-      <div style={{ padding: '16px' }}>
-        <Text 
-          type="title" 
-          level={4} 
-          style={{ 
-            marginBottom: '12px',
-            color: '#262626'
-          }}
-        >
-          {title}
-        </Text>
-        <Text 
-          type="paragraph" 
-          style={{ 
-            color: '#595959',
-            fontSize: '14px',
-            lineHeight: '1.6'
-          }}
-        >
-          {description}
-        </Text>
-      </div>
+      <Text 
+        type="title" 
+        level={5} 
+        style={{ 
+          marginBottom: '8px',
+          color: '#262626',
+          fontWeight: 600
+        }}
+      >
+        {title}
+      </Text>
+      <Text 
+        type="paragraph" 
+        style={{ 
+          color: '#595959',
+          fontSize: '13px',
+          lineHeight: '1.5',
+          margin: 0
+        }}
+      >
+        {description}
+      </Text>
     </Card>
   );
 };
