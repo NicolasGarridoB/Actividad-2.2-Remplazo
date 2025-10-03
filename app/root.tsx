@@ -7,10 +7,12 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import type { Route } from "./+types/root";
+import type { LinksFunction } from "react-router";
+import { ConfigProvider, esES } from "../components/AntdProvider";
 import "./app.css";
+import "../components/styles.css";
 
-export const links: Route.LinksFunction = () => [
+export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -42,10 +44,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ConfigProvider locale={esES}>
+      <Outlet />
+    </ConfigProvider>
+  );
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({ error }: any) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;

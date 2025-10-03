@@ -1,0 +1,164 @@
+/* Estilos globales para los componentes */
+.home-layout {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.btn-white:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #40a9ff !important;
+  color: #40a9ff !important;
+}
+
+/* Main Banner styles */
+.main-banner {
+  position: relative;
+}
+
+.main-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+  z-index: 1;
+}
+
+.main-banner > div {
+  position: relative;
+  z-index: 2;
+}
+
+.main-banner .text-section h1 {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-banner .text-section .ant-typography {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Info Section styles */
+.info-section {
+  position: relative;
+}
+
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.info-card .ant-card-cover img {
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover .ant-card-cover img {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+.footer {
+  margin-top: auto;
+}
+
+.footer .ant-divider {
+  border-color: #434343 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-banner {
+    min-height: 60vh;
+    padding: 60px 16px;
+  }
+  
+  .main-banner .text-section h1 {
+    font-size: 36px !important;
+  }
+  
+  .info-section {
+    padding: 60px 16px;
+  }
+  
+  .button-group .ant-space {
+    flex-direction: column;
+  }
+  
+  .button-group .ant-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-banner .text-section h1 {
+    font-size: 28px !important;
+  }
+  
+  .header {
+    padding: 12px 16px !important;
+  }
+  
+  .footer {
+    padding: 32px 16px 16px !important;
+  }
+}
+
+/* Ant Design customizations */
+.ant-layout {
+  background: white;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* Loading and animation styles */
+.info-card img {
+  transition: opacity 0.3s ease;
+}
+
+.info-card img[src=""] {
+  opacity: 0;
+}
+
+/* Accessibility improvements */
+.main-banner button:focus,
+.header button:focus {
+  outline: 2px solid #40a9ff;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .main-banner {
+    background: none !important;
+    color: black !important;
+  }
+  
+  .footer {
+    background: none !important;
+    color: black !important;
+  }
+}
